@@ -36,16 +36,24 @@ img.alt = 'Super Man';
 // Поместить изображение внутрь элемента с классом wrapper
 div.appendChild(img);
 // Используя HTML строку, создать DIV с классом 'pDiv' + c 2-мя параграфами
-
+const elementHTML = `
+          <div class ='pDiv'>
+          <p>Параграф 1</p>
+          <p>Параграф 2</p>
+          </div>`
 // Поместить этот DIV до элемента <ul></ul>
-
+const ulList = div.querySelector('ul');
+ulList.insertAdjacentHTML("beforebegin", elementHTML);
 // Добавить для 2-го параграфа класс text
-
+const pDiv = document.querySelector('.pDiv');
+pDiv.children[1].classList.add('text');
 // Удалить 1-й параграф
-
+pDiv.firstElementChild.remove();
 // Создать функцию generateAutoCard, 
 // которая принимает 3 аргумента: brand, color, year
-
+const generateAutoCard = (brand, color, year) => {
+  
+}
 // Функция должна возвращать разметку HTML:
 // <div class="autoCard">
 //   <h2>BRAND YEAR</h2>
